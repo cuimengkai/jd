@@ -1,0 +1,136 @@
+/* 中间分类部分 */
+.grid {
+    height: 480px;
+}
+.grid-colone {
+    width: 190px;
+    height: 100%;
+    background-color: #fff;
+    font-size: 12px; /*给反斜杠的字体大小*/
+    color: #666;
+    font-weight: 300;
+}
+.grid-colone ul {
+    border-top: 1px solid #dbd6d6ec;
+    padding: 15px 0;
+}
+.grid-colone ul li {
+    padding-left: 18px;
+    height: 28px;
+    line-height: 28px;
+}
+.grid-colone li:hover {
+    background-color: #dbd6d6ec;
+}
+.grid-colone a {
+    font-size: 14px;
+    color: #666;
+    font-weight: 300;
+}
+.grid-colone a:hover {
+    color: #c81623;
+}
+/* 广告banner 部分 */
+.grid-coltwo {
+    width: 790px;
+    height: 100%;
+    margin-left: 10px;
+}
+.grid-coltwo-l {
+    margin-top: 10px;
+}
+.grid-coltwo-r a{
+    margin-top: 10px;
+    display: block;
+    width: 190px;
+    height: 150px;
+}
+.grid-coltwo-r li:nth-child(1) {
+    background: url(../images/a.jpg) no-repeat;
+    background-size: 190px 150px;
+}
+.grid-coltwo-r li:nth-child(2) {
+    background: url(../images/b.jpg) no-repeat;
+    background-size: 190px 150px;
+}
+.grid-coltwo-r li:nth-child(3) {
+    background: url(../images/c.jpg) no-repeat;
+    background-size: 190px 150px;
+}
+/* 翻页部分 */
+.grid-coltwo-l {
+    position: relative;
+}
+.grid-coltwo-l i {
+    font-style: normal;
+}
+.arr-l, .arr-r {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);/*按钮靠边垂直居中*/
+    width:24px;
+    height: 40px;
+    background-color: rgba(0,0,0,.2);
+    line-height: 40px;
+    color: rgba(255,255,255,.4);
+    text-align: center;
+}
+.arr-r {
+    right: 0px;
+}
+.arr-l:hover, .arr-r:hover {
+    background-color: rgba(0,0,0,.4);
+    color: rgba(255,255,255,.4);
+}
+.circle {
+    position: absolute;
+    width: 175px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .3);
+    left: 50%;
+    transform: translateX(-50%); /*设置元素水平居中*/
+    bottom: 20px;
+    border-radius: 10px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+.circle li {
+    list-style: none;
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+}
+.circle .current {
+    background-color: #f10215;
+}
+.circle li:hover {
+    background-color: #f10215;
+    cursor: pointer;
+}
+/* 扩展模块 */
+.grid-colthree {
+    margin-top: 10px;
+    width: 190px;
+    height: 470px;
+    background-color: #fff;
+}
+/* 登陆 */
+.grid-colthree .login {
+    height: 85px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+/* 新闻 */
+.grid-colthree .news {
+    height: 155px;
+    border: 1px solid #ccc;
+}
+/* 服务扩展 */
+.grid-colthree .expand {
+    height: 195px;
+    border: 1px solid #ccc;
+}
