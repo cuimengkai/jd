@@ -1,0 +1,444 @@
+/*网站版心的公共样式*/
+.w {
+    width: 1190px; /*测量出网站的版心*/
+    margin: 0 auto; /*居中对齐*/
+}
+body {
+    background-color: #f0f3ef;
+}
+/* 浮动公共类 */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/*使用淘宝清除默认内外边距*/
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{
+    margin: 0;
+    padding: 0;
+}
+/*清除input 默认内外边框*/
+input, button {
+    border: 0px;
+    outline: none;
+}
+/*清除ul自带的小圆点 和内外边距*/
+ul {
+    list-style: none;
+}
+/*清除所有a标签的默认下划线*/
+a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 12px;
+}
+/*鼠标经过修改颜色*/
+a:hover {
+    color: #e33333;
+}
+/*字体颜色类*/
+.f10 {
+    color: #f10215!important; /*提高层叠权限*/
+}
+/*字体声明 方便应用字体图标*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?8qhwk5');
+    src: url('../fonts/icomoon.eot?8qhwk5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?8qhwk5') format('truetype'),
+    url('../fonts/icomoon.woff/8qhwk5') format('woff'),
+    url('../fonts/icomoon.svg?8qhwk5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*header部分 start*/
+header {
+    height: 80px; /*高度写法 h80px*/
+    background-color: #f24865; /*背景色写法 bgc*/
+}
+/*header部分 end*/
+/* 快速导航栏部分 start*/
+.shortcut {
+    background-color: #e3e4e5;
+    height: 30px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 12px;
+    color: #999999;
+    line-height: 30px; /*行高等于高 可使得文字垂直居中*/
+}
+.city {
+    margin-left: 200px; /*左外边距 200px*/
+}
+.shortcut li {
+    float: left;
+}
+/* 使用字体图标 */
+.shortcut i {
+    font-family: 'icomoon';
+    font-weight: normal; /*去除默认的字体加粗*/
+    font-style: normal; /*去除默认的字体倾斜*/
+    color: #999999;
+}
+/*小竖线*/
+.space {
+    width: 1px;
+    height: 10px;
+    background-color: #cccccc;
+    margin: 10px 12px 0px;
+}
+/*基于子绝父相 设置二维码 定位*/
+.mobile {
+    position: relative;
+}
+.mobile img {
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 3px;
+    top: 24px;
+    right: -10px;
+}
+/* 快速导航栏部分 end*/
+/* 中间头部start */
+.middle {
+    height: 140px;
+    position: relative;
+}
+/* logo一般都采用背景图片的形式  */
+.logo {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, .3); /*设置logo影子*/
+}
+.logo a{
+    display: block; /*a标签为行内元素 转换为块级元素*/
+    background: url(../images/sprite.png) no-repeat;
+    background-size: 374px 339.5px;
+    overflow: hidden;
+    width: 190px;
+    height: 170px;
+    background-position: 0 0;
+}
+/* 搜索 */
+.form {
+    width: 550px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    left: 320px;
+}
+.form input {
+    width: 495px;
+    height: 33px;
+    border: 1px solid #f10215;
+    float: left; /*使用float去除元素间距*/
+    font-size: 14px;
+    color: #989898;
+    padding-left: 3px;
+    /*box-sizing: border-box; 修改盒模型 避免使用padding 使得width增大*/
+}
+.form button {
+    width: 50px;
+    height: 35px;
+    background-color: #f10215;
+    float: left;
+}
+.form i {
+    font-family: 'icomoon';
+    font-style: normal; /*去除默认的字体倾斜*/
+    color: #fff;
+}
+/* 购物车 */
+.shopCar {
+    width: 188px;
+    height: 33px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 25px;
+    right: 95px;
+    background-color: #fff;
+    line-height: 33px; /*行高等于高 文本垂直居中*/
+    text-align: center; /*文本水平居中*/
+    color: #f10215;
+}
+.shopCar i {
+    font-family: 'icomoon';
+    font-style: normal; /*去除默认的字体倾斜*/
+    margin-right: 3px;
+}
+.shopCar span {
+    width: 14px;
+    height: 14px;
+    background-color: #f10215;
+    border-radius: 50%;
+    position: absolute; /*行内元素 本身没有高度 position 默认将行内转为块级 基于BFC原理*/
+    top: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    text-align: center;
+    left: 140px;
+}
+/* 关键字 */
+.keysword {
+    position: absolute;
+    top: 68px;
+    left: 320px;
+}
+.keysword a {
+    margin-right: 10px;
+}
+/* 小导航 */
+.navItems {
+    width: 790px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    line-height: 40px;
+}
+.navItems ul li {
+    float: left;
+    margin-left: 30px;
+}
+.navItems img {
+    width: 40px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    right: 200px;
+}
+.navItems a {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+.navItems a:hover {
+    color: #f10214;
+}
+.navItems .navspace {
+    width: 1px;
+    height: 15px;
+    background-color: #cccccc;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: -15px;
+}
+/* 活动 */
+.activity {
+    position: absolute;
+    width: 190px;
+    height: 40px;
+    right: 0px;
+    bottom: 10px;
+}
+.activity a {
+    background: url(../images/activity.png) no-repeat;
+    display: block;
+    width: 190px;
+    height: 40px;
+    position: absolute;
+    right: -20px;
+}
+/* 中间头部 end */
+/* 底部分 start */
+footer {
+    height: 610px;
+    background-color: #EAEAEA;
+    margin-top: 35px;
+}
+/* 服务 */
+.service {
+    padding: 30px 0;
+    border-bottom: 1px solid #DEDEDE;
+    overflow: hidden; /*基于BFC清除浮动*/
+}
+.service ul li {
+    width: 297px;
+    height: 43px;
+    position: relative;
+    line-height: 43px;
+    float: left;
+}
+.service li h5 {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    width: 36px;
+    height: 43px;
+    background: url(../images/font.png) no-repeat;
+    background-size: 36px 171px;
+    text-indent: -999px; /*该技巧用于隐藏文本信息*/
+}
+.service li:nth-child(2) h5 {
+    background-position: 0 -43px;
+}
+.service li:nth-child(3) h5 {
+    background-position: 0 -86px;
+}
+.service li:nth-child(4) h5 {
+    background-position: bottom;
+}
+.service li p {
+    font-weight: 700;
+    margin-left: 82px;
+}
+/* 帮助 */
+.help {
+    height: 200px;
+    border-bottom: 1px solid #DEDEDE;
+    padding-top: 25px;
+    box-sizing: border-box; /*改为盒模型的解析方式*/
+}
+.help dl {
+    width: 192px;
+    float: left;
+}
+.help dt {
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+.help dd {
+    height: 22px;
+    font-size: 12px;
+    color: #666;
+}
+/*范围*/
+.coverage {
+    width: 200px;
+    height: 150px;
+    background: url(../images/ico_footer.png) no-repeat;
+
+}
+.coverage h5 {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+}
+.coverage p {
+    line-height: 18px;
+    color: #666;
+    width: 180px;
+    height: 54px;
+    font-size: 12px;
+}
+.coverage a {
+    margin-top: 5px;
+    display: block;
+    width: 180px;
+    text-align: right;
+}
+.coverage a i {
+    font-family: 'icomoon';
+    font-style: normal; /*去除默认的字体倾斜*/
+    margin: 0px;
+}
+/* 版权 */
+.copyright {
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+.copyright span {
+    margin: 0 10px;
+}
+.copyright a {
+    color: #666;
+}
+.copyright a:hover {
+    color: #c81623;
+}
+.copy {
+    line-height: 22px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0px;
+}
+.copy span {
+    margin: 0 10px;
+}
+.icon-foot {
+    display: block;
+    margin-top: 5px;
+}
+.icon-foot a{
+    display: inline-block; /*设置为行内块 左右布局 可以使用text-align 居中*/
+    width: 103px;
+    height: 32px;
+    margin: 0 3px;
+    background-color: pink;
+    text-align: center;
+    background: url(../images/ico_footer.png) no-repeat;
+}
+.icon-foot a:nth-child(1) {
+    background-position: 0 -151px;
+}
+.icon-foot a:nth-child(2) {
+    background-position: -104px -151px;
+}
+.icon-foot a:nth-child(3) {
+    background-position: 0 -184px;
+}
+.icon-foot a:nth-child(4) {
+    background-position: -104px -184px;
+}
+.icon-foot a:nth-child(5) {
+    background-position: 0 -217px;
+}
+.icon-foot a:nth-child(6) {
+    background-position: -104px -217px;
+}
+/* 转场 */
+.advertising {
+    position: fixed;
+    bottom: 0;
+    left: -3px;
+    width: 1280px;
+    background: url(../images/advertising.png) center bottom no-repeat;
+    height: 146px;
+}
+.advertising ul {
+    margin-left: 540px;
+    margin-top: 75px;
+}
+.advertising ul li {
+    float: left;
+}
+.advertising li a {
+    display: block;
+    width: 112px;
+    height: 42px;
+}
+.advertising li:nth-child(1) {
+    background: url(../images/kw3c.png) no-repeat;
+    background-size: 112px 42px;
+}
+.advertising li:nth-child(2) {
+    background: url(../images/pzjd.png) no-repeat;
+    background-size: 112px 42px;
+}
+.advertising li:nth-child(3) {
+    background: url(../images/jdcs.png) no-repeat;
+    background-size: 112px 42px;
+}
+.advertising li:nth-child(4) {
+    background: url(../images/ssfs.png) no-repeat;
+    background-size: 112px 42px;
+}
+.advertising li:nth-child(5) {
+    background: url(../images/jjsh.png) no-repeat;
+    background-size: 112px 42px;
+}
+.advertising li:nth-child(6) {
+    background: url(../images/jdsx.png) no-repeat;
+    background-size: 112px 42px;
+}
+/* 底部分 end */

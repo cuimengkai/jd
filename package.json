@@ -1,0 +1,25 @@
+{
+  "name": "jd",
+  "version": "1.0.0",
+  "description": "京东网项目练习",
+  "main": "index.js",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuimengkai/jd.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cuimengkai/jd/issues"
+  },
+  "homepage": "https://github.com/cuimengkai/jd#readme"
+}
