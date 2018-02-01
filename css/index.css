@@ -9,6 +9,7 @@
     font-size: 12px; /*给反斜杠的字体大小*/
     color: #666;
     font-weight: 300;
+    position: relative;
 }
 .grid-colone ul {
     border-top: 1px solid #dbd6d6ec;
@@ -29,6 +30,29 @@
 }
 .grid-colone a:hover {
     color: #c81623;
+}
+/* 分类广告 */
+.grid-colone .ad {
+    position: absolute;
+    width: 250px;
+    height: 480px;
+    top: 0px;
+    left: -250px;
+}
+.grid-colone .ad_r {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    z-index: 999;
+    width: 0px;
+    height: 480px;
+    background: url(../images/lyhdetail.jpg) no-repeat;
+    /*添加过渡 */
+    transition: all 0.8s;
+}
+/*鼠标经过ad的时候 ad_r的宽度改为990px*/
+.grid-colone .ad:hover .ad_r{
+    width: 990px;
 }
 /* 广告banner 部分 */
 .grid-coltwo {
@@ -120,17 +144,183 @@
 /* 登陆 */
 .grid-colthree .login {
     height: 85px;
-    border: 1px solid #ccc;
     padding: 15px;
 }
-
+.login-t {
+    width: 95px;
+    font-size: 12px;
+    white-space: nowrap; /*强制一行内显示*/
+    overflow: hidden; /*溢出隐藏*/
+    text-overflow: ellipsis; /*超出的部分显示省略号*/
+    color: #666;
+    padding-left: 60px;
+    height: 60px;
+    line-height: 20px;
+    position: relative;
+}
+.login-t a {
+    color: #666;
+}
+.user {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.user img {
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.login-t a:hover {
+    color: #f10215;
+}
+.login-b a{
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    border-radius: 13px;
+    /* border: 1px solid rgba(0, 0, 0, .2); */
+    line-height: 25px;
+    color: #e43f3b;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 3px;
+    box-shadow: 4px 6px 12px 2px rgba(45,45,45,.15);
+}
+.login-b a:last-child {
+    background-color: #363634;
+    color: #e5d790;
+}
+.login-b a:hover {
+    background-color: #e43f3b;
+    color: #fff;
+}
 /* 新闻 */
 .grid-colthree .news {
     height: 155px;
-    border: 1px solid #ccc;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+}
+.new-t {
+    height: 19px;
+    position: relative;
+}
+.new-t a {
+    float: left;
+    height: 17px;
+    width: 38px;
+    line-height: 17px;
+}
+.cx {
+    border-right: 1px solid #ccc;
+}
+.gg {
+    margin-left: 15px; 
+}
+.new-t .more {
+    float: right;
+}
+.new-t div {
+    height: 2px;
+    width: 28px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: -1px;
+}
+.new-b {
+   padding-top: 15px;
+}
+.new-b li {
+    height: 23px;
+    line-height: 23px;
+    color: #999;
+    font-size: 12px;
+
 }
 /* 服务扩展 */
 .grid-colthree .expand {
     height: 195px;
-    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.expand ul {
+    width: 195px;
+}
+.expand li {
+    width: 47px;
+    height: 66px;
+    float: left;
+}
+.expand li a {
+    display: block;
+    padding-top: 15px;
+    text-align: center;
+}
+.expand li i {
+    display: block;
+    margin: 0 auto;
+    background: url(../images/sprite.service.png) no-repeat;
+    overflow: hidden;
+    font-style: normal;
+}
+.expand li:first-child i {
+    background-position: -145.5px -43px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(2) i {
+    background-position: -29px -43px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(3) i {
+    background-position: -175.5px -43px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(4) i {
+    background-position: -87.5px -43px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(5) i {
+    background-position: -116.5px -43px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(6) i {
+    background-position: -117.5px -72px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(7) i {
+    background-position: -58.5px -43px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(8) i {
+    background-position: -1.5px -72px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(9) i {
+    background-position: -30.5px -72px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(10) i {
+    background-position: -58.5px -72px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(11) i {
+    background-position: -86.5px -72px;
+    height: 24px;
+    width: 24px;
+}
+.expand li:nth-child(12) i {
+    background-position: -0.5px -43px;
+    height: 24px;
+    width: 24px;
 }
